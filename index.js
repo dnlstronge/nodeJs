@@ -1,9 +1,7 @@
-const { readFile } = require("fs").promises;
+import daves from "./new-module.js";
 
-async function heelo() {
-const txt = await readFile("./HelloMate.txt", "utf8")
-}
-;
+const name = daves.person;
 
-heelo()
-console.log("Working")
+
+console.log(name);
+
