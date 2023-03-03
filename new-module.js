@@ -1,5 +1,5 @@
 const daves = {
-    person: "dave" ,
+    person: "steve" ,
     age: 25
 };
 
