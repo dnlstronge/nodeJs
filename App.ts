@@ -1,9 +1,10 @@
-// map a linked list to another linked list in reverse,
+/* Create a simple counter which increments by 1 each second and log this to console */
 
-const arr = [
-    1, 2, 3, 4, 5
-]
+let counter: number = 0
 
-const newArr = arr.map(num => num).reverse();
 
-console.log(newArr)
+
+setInterval(() => {
+    counter = counter + 1
+    console.log(counter)
+}, 1000);
