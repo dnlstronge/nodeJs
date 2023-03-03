@@ -1,13 +1,9 @@
-const { EventEmitter } = require('events');
-const eventEmitter = new EventEmitter();
+const { readFile } = require("fs").promises;
 
-eventEmitter.on('lunch', () => {
-    console.log("itchy tasty!!")
-})
-eventEmitter.on("breakfast", () => {
-    console.log("Scratchy itchy tasty....")
-})
+async function heelo() {
+const txt = await readFile("./HelloMate.txt", "utf8")
+}
+;
 
-eventEmitter.emit('lunch');
-
-eventEmitter.emit("breakfast")
+heelo()
+console.log("Working")
