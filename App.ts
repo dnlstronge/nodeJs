@@ -1,15 +1,9 @@
+// map a linked list to another linked list in reverse,
 
+const arr = [
+    1, 2, 3, 4, 5
+]
 
-const person =  {
-    name : "dave",
-    age: 25
-}
+const newArr = arr.map(num => num).reverse();
 
-const amount = 9;
-
-if(amount < 10) {
-    console.log("smaller")
-} else {
-    console.log("larger")
-}
-
+console.log(newArr)
