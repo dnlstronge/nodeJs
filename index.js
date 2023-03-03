@@ -9,4 +9,5 @@ eventEmitter.on("breakfast", () => {
 })
 
 eventEmitter.emit('lunch');
+
 eventEmitter.emit("breakfast")
