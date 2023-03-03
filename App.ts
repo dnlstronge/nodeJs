@@ -1,10 +1,9 @@
-/* Create a simple counter which increments by 1 each second and log this to console */
 
-let counter: number = 0
+const dave = "Dave"
+const steve = "Steve"
 
+const sayHi = (name: string) => {
+    console.log(`Hi there....${name}, ${dave} and ${steve}`)
+}
 
-
-setInterval(() => {
-    counter = counter + 1
-    console.log(counter)
-}, 1000);
+sayHi("Dan")

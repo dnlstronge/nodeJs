@@ -1,5 +1,6 @@
-var counter = 0;
-setInterval(function () {
-    counter = counter + 1;
-    console.log(counter);
-}, 1000);
+var dave = "Dave";
+var steve = "Steve";
+var sayHi = function (name) {
+    console.log("Hi there....".concat(name, ", ").concat(dave, " and ").concat(steve));
+};
+sayHi("Dan");
