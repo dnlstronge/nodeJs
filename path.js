@@ -9,3 +9,9 @@ const filePath = path.join("/content", "subfolder", "test.txt")
 console.log(filePath);
 
 /* outputs: /content/subfolder/test.txt */
+
+/* even if you add to this it will be removed e.g:  */
+
+const filePath2 = path.join("/content", "//subfolder", "/test.txt")
+
+console.log(filePath2) // returns the same as filePath
