@@ -10,4 +10,4 @@ const runTime = os.uptime()
 
 console.log(runTime);
 
-console.log(Number((runTime / 1000 / 60).toFixed(2))) // mins
+console.log(`The system has been running for ${Number((runTime / 1000 / 60).toFixed(2))} minutes`) // mins
