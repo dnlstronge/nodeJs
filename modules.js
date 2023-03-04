@@ -6,8 +6,13 @@ console.log(user);
 
 // get info about how long machine has been running
 
-const runTime = os.uptime()
 
-console.log(runTime);
 
-console.log(`The system has been running for ${Number((runTime / 1000 / 60).toFixed(2))} minutes`) // mins
+
+
+const output = () => {
+     let upTime = os.uptime()
+     return `The system has been running for ${upTime} seconds or ${upTime / 60} minutes`
+}
+
+console.log(output()) // mins
