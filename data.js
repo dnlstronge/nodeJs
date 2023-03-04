@@ -1,10 +1,6 @@
-// local 
+module.exports.items = ["item1", "item2"];
+const person = {
+    name: "dave"
+};
 
-const secret = "secret";
-
-// share
-
-const dave = "dave";
-const steve = "steve";
-
-module.exports = {dave, steve};
+module.exports.singleperson = person;
