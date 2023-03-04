@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   
-  "type" : "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/dnlstronge/nodeJs/issues"
   },
-  "homepage": "https://github.com/dnlstronge/nodeJs#readme"
+  "homepage": "https://github.com/dnlstronge/nodeJs#readme",
+  "devDependencies": {
+    "@types/node": "^18.14.5"
+  }
 }
