@@ -9,4 +9,4 @@ const sayHi = require("./testFunc.js")
 console.log(names.steve)
 
 
-//sayHi(names.steve)
+sayHi(names.steve)
