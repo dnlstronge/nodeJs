@@ -1,3 +1,8 @@
-const data = require("./data");
+const num1 = 5;
+const num2 = 10;
 
-console.log(data)
+function addValues() {
+    console.log(`The sum is ${num1 + num2}`) 
+};
+
+addValues();
