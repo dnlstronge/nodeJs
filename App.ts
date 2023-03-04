@@ -1,4 +1,8 @@
 
+
+// modules => encapsulated code - shares only the minimum
+// every file in node is a module
+
 const dave = "Dave"
 const steve = "Steve"
 
