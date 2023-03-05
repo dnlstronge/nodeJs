@@ -16,3 +16,18 @@ console.log(first, second, third);
 // two args, path (if it does not exist Node will create), "value"
 
 writeFileSync("./content/third.txt", "As I nodded nearly napping....");
+
+// if you just want to append, writeFileSync takes one more argument: 
+// an options object with the property flag: a == append
+
+writeFileSync("./content/third.txt", "suddenly there came a tapping....", {flag: "a"});
+
+// again: 
+
+writeFileSync("./content/third.txt", "...as if someone gently rapping......rapping at my chamber door", {flag: "a"});
+
+// and once more: 
+
+writeFileSync("./content/third.txt", "....tis some late visitor I muttered, entreating entrance at my chamber door....this it is and nothing more", {flag: "a"});
+
+
