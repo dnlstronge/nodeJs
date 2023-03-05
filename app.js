@@ -8,9 +8,22 @@ const http = require("http");
 // res ===> response of what is being sent back
 
 const server = http.createServer((req, res) => {
-    console.log(req)
-    res.write('welcome to my homepage')
-    res.end()
+    if(req.url === "/") {
+        res.end("Welcome to my hompage")
+    }
+    if(req.url === "/about") {
+        res.end("This here is the about page")
+    }
+    if(req.url === "/contact") {
+        res.end("this is the about page matey")
+    }
+    res.end(
+        <section>
+            <h3>404 Error</h3>
+            <div>The page does not exist</div>
+       </section>
+    )
+   
 });
 
 //server needs to listen to a port: (number is arbitrary for now)
