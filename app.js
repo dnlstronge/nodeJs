@@ -17,12 +17,8 @@ const server = http.createServer((req, res) => {
     if(req.url === "/contact") {
         res.end("this is the about page matey")
     }
-    res.end(
-        <section>
-            <h3>404 Error</h3>
-            <div>The page does not exist</div>
-       </section>
-    )
+    return res.end(`<h2>Oops....page not found</h2>
+                    <a href="/">Return to homepage</a>`)
    
 });
 
