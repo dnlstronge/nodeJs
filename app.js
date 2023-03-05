@@ -9,17 +9,21 @@ const http = require("http");
 
 const server = http.createServer((req, res) => {
     if(req.url === "/") {
-        res.end("Welcome to my hompage")
+    return    res.end("Welcome to my hompage")
     }
     if(req.url === "/about") {
-        res.end("This here is the about page")
+    return    res.end("This here is the about page")
     }
     if(req.url === "/contact") {
-        res.end("this is the about page matey")
+    return    res.end("this is the about page matey")
+    } else {
+    return res.end(`
+                <div>
+                    <h2>Oops....page not found</h2>
+                    <a href="/">Return to homepage</a>
+                </div>
+                    `)
     }
-    return res.end(`<h2>Oops....page not found</h2>
-                    <a href="/">Return to homepage</a>`)
-   
 });
 
 //server needs to listen to a port: (number is arbitrary for now)
