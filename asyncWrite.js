@@ -7,12 +7,18 @@ const { readFile, writeFile } = require("fs");
 // whenever the functionality is complete run the callback, just like
 // add eventlistener on a button
 
-readFile("./content/third.txt", "utf8", (err, result) => {
+readFile("./content/first.txt", "utf8", (err, result) => {
     if(err) {
         console.log("Whoops, something went wrong.....")
         return;
     }
-    console.log(result);
+    const show = result;
+    readFile("./content/second.txt", "utf8", (err, result) => {
+        if(err) {
+            console.log("Michael...I've made a huge mistake....")
+        }
+        const show2 = result;
+    })
 });
 
 /* if you don't add encoding value you will get buffer data ;
