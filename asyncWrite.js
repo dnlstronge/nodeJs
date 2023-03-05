@@ -1,6 +1,6 @@
 // async:
 
-const { readFile, writeFile } = require("fs");
+const { readFile, writeFile, write } = require("fs");
 
 // async needs a callback :)
 
@@ -15,11 +15,33 @@ readFile("./content/first.txt", "utf8", (err, result) => {
     const show = result;
     readFile("./content/second.txt", "utf8", (err, result) => {
         if(err) {
-            console.log("Michael...I've made a huge mistake....")
+            console.log("Whoops, something went wrong.....")
+            return;
         }
         const show2 = result;
-    })
+        writeFile("./content/asynctest.txt", `show both: ${show} ${show2}`, (err, result) => {
+            if(err) {
+                console.log("Oh no! an Error!")
+                return;
+            }
+            console.log(result);
+        })
+    });
+  
 });
+
+// returns undefined but if you check the file it created it should contain the data!!!!
+
+
+
+
+
+
+
+// now call readfile to check that file async.txt contains the content from
+// show and show2: 
+
+
 
 /* if you don't add encoding value you will get buffer data ;
 
