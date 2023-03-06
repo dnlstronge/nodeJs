@@ -14,4 +14,17 @@ testme();
 
 const _ = require("lodash");
 
+// create an array of arrays: 
+
+const items = [[1, 2, 4], [1, 4], [7, 4, 2]];
+
+// use flattendeep on the array(s):
+
+const FD_items = _.flattenDeep(items);
+
+// compare the two: 
+
+console.log(items);
+console.log(FD_items);
+
 
