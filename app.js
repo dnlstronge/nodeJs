@@ -1,4 +1,4 @@
-const arr = [1, 2, 3, 4, 5];
+const arr = [1, 2, 3, 4, 5, 6];
 const str = "Good Morning Y'all";
 const boolfool = true;
 
@@ -11,5 +11,7 @@ console.log(`${a} is an array, followed by a string: ${b}`)
 };
 
 testme();
+
+const _ = require("lodash");
 
 
