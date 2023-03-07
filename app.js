@@ -7,3 +7,5 @@ setInterval( () => {
 }, 2000)
 
 console.log("Don't ya wanna-balloon?") // (1)
+
+// this procees does not exit, requires that I kill terminal
