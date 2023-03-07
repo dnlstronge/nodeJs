@@ -10,3 +10,5 @@ setTimeout(() => {
     console.log("two") //(3)
 }, 0)
 console.log("three") //(2)
+
+// the important thing to remember here is that async = offloaded
