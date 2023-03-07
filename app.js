@@ -1,14 +1,9 @@
-// another example, 
+// event loop examples
 
 
+// set interval is aync, so in this case every 2 secs the callback is invoked again by event loop
+setInterval( () => {
+    console.log("Hiya Georgie!!") // (2 ++ every 2 secs thereafter)
+}, 2000)
 
-console.log("one"); //(1)
-
-
-// setTimeout is async --- it completes after, so the console log for two, is actually logged 3rd
-setTimeout(() => {
-    console.log("two") //(3)
-}, 0)
-console.log("three") //(2)
-
-// the important thing to remember here is that async = offloaded
+console.log("Don't ya wanna-balloon?") // (1)
