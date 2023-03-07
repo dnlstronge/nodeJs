@@ -1,5 +1,6 @@
 // taking a look at event loop in action
 // I'll order the number in which the tasks get executed
+// readFile is async and this is an example of offloading
 
 const { readFile } = require("fs")
 // (1)
@@ -12,7 +13,7 @@ readFile("./content/first.txt", "utf8", (err, result) => {
     }
     // (3)
     console.log(result)
-    console.log("second task completed")
+    console.log("next task completed")
 
 })
 
