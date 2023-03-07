@@ -1,21 +1,12 @@
-// taking a look at event loop in action
-// I'll order the number in which the tasks get executed
-// readFile is async and this is an example of offloading
+// another example, 
 
-const { readFile } = require("fs")
-// (1)
-console.log("log first start task");
 
-readFile("./content/first.txt", "utf8", (err, result) => {
-    if(err) {
-        console.log(err.message)
-        return
-    }
-    // (3)
-    console.log(result)
-    console.log("next task completed")
 
-})
+console.log("one"); //(1)
 
-// (2)
-console.group("starting next task")
+
+// setTimeout is async --- it completes after, so the console log for two, is actually logged 3rd
+setTimeout(() => {
+    console.log("two") //(3)
+}, 0)
+console.log("three") //(2)
