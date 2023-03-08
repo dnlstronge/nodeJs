@@ -1,6 +1,8 @@
 const { readFile } = require("fs");
 const util = require("util");
 
+// util has promise()
+
 // now you I can invoke getText and it will return a promise
 // this is a behind the scenes for async-await
 
