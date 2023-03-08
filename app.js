@@ -1,4 +1,5 @@
 const { readFile } = require("fs");
+const util = require("util");
 
 // now you I can invoke getText and it will return a promise
 // this is a behind the scenes for async-await
@@ -19,8 +20,7 @@ const start = async () => {
   try {
     const first = await getText("./content/first.txt");
     const second = await getText("./content/second.txt");
-    console.log(first); // only once promise is resolved get response
-    console.log(second);
+    console.log(first, second); // only once promise is resolved get response
   } catch (error) {
     console.log(error);
   }
