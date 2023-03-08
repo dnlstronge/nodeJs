@@ -18,7 +18,9 @@ const getText = (path) => {
 const start = async () => {
   try {
     const first = await getText("./content/first.txt");
+    const second = await getText("./content/second.txt");
     console.log(first); // only once promise is resolved get response
+    console.log(second);
   } catch (error) {
     console.log(error);
   }
