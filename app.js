@@ -19,4 +19,4 @@ readFile(path, "utf8", (err, data) => {
 }
 
 
-gettext("./content/first.txt");
+gettext("./content/first.txt").then((result) => console.log(result));
