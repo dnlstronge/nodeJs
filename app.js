@@ -19,8 +19,12 @@ readFile(path, "utf8", (err, data) => {
 }
 
 const start = async() => {
+    try {
     const first = await getText("./content/first.txt")
                   console.log(first) // only once promise is resolved get response
+    } catch(error) {
+        console.log("Error - file not found")
+    }
 }
 
 // invoke start: 
