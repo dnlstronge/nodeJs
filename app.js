@@ -11,7 +11,20 @@ const customEmit = new EventEmitter();
 // on = listen for an event
 // emit = emit an event
 
-customEmit.on("response", () => {
-    console.log(`data received`)
+
+// subscribe - can have as amny as you like.
+customEmit.on("response", (name, age) => {
+    console.log(`data received name: ${name} age: ${age}`)
 })
-customEmit.emit("response")
+// e.g: 
+customEmit.on("response", () => {
+    console.log(`some other logic here`)
+})
+
+// then emit
+customEmit.emit("response", "john", 34)
+
+// remember order here matters!!! can't emit an event before listening to it
+// you can pass different params into the on function,
+// these can be added as values inside emiit.  
+// on tells customEmit how to emit, emit tells customEmit if and what to emit
